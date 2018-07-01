@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Sugestões</title>
+</h:head>
+<body>
+
+
+ 
+ <h:form> 	
+ 	<p:fieldset legend="Sugestão" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="5">
+
+		<p:outputLabel value="Ramal da sugestão " />
+            <p:selectOneMenu  value="#{sugestaoBean.sugestao.tipo}" noSelectionOption="true" >
+                <f:selectItem itemLabel="Professor" itemValue="Professor" />
+                <f:selectItem itemLabel="Equipamento" itemValue="Equipamento" />
+                <f:selectItem itemLabel="Sala" itemValue="Sala" />
+                <f:selectItem itemLabel="Notas" itemValue="Notas" />
+                <f:selectItem itemLabel="Coordenador" itemValue="Coordenador" />
+                
+                
+            </p:selectOneMenu>
+<p:outputLabel value="Descrição"/>
+ <p:inputTextarea rows="6" cols="33" value="#{sugestaoBean.sugestao.descricao}"/>
+ 
+ <p:selectBooleanCheckbox style="float: right;" value="#{sugestaoBean.sugestao.anonimo}" />
+  <h:outputText value="Fazer sugestão no modo anônimo" />
+  <p:commandButton value="Enviar"   > </p:commandButton>
+        
+
+        </h:panelGrid>
+    </p:fieldset>
+ </h:form>
+ 
+</body>
+</html>

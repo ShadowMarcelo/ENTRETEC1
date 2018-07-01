@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Pesquisa</title>
+</h:head>
+<body>
+ <h:form>
+ 
+  <h3 style="margin-top:0">Pesquisa</h3>
+    <p:tabView>
+        <p:tab title="Esportes ">
+            <h:panelGrid columns="4" cellpadding="5">                
+                <p:outputLabel for="esporte" value="Pratica algum tipo de esporte?"/>
+                <p:selectOneRadio id="esporte">
+            		<f:selectItem itemLabel="Sim" itemValue="Sim" />
+           			<f:selectItem itemLabel="Não" itemValue="Não" />
+ 				</p:selectOneRadio>                     
+          		</h:panelGrid>    
+          		      		
+          		<h:panelGrid cellpadding="5" columns="2">
+          			<p:outputLabel for="qual" value="Qual?"/>
+          			<p:selectOneMenu id="qual">
+          			<f:selectItem itemLabel="Escolha"/>
+          			<f:selectItem itemLabel="Arco e Flecha" itemValue="Arco e Flecha" />
+          			<f:selectItem itemLabel="Artes Marciais" itemValue="Artes Marciais" />
+          			<f:selectItem itemLabel="Badminton" itemValue="Badminton" />
+          			<f:selectItem itemLabel="Basquete" itemValue="Basquete" />
+          			<f:selectItem itemLabel="Ciclismo" itemValue="Ciclismo" />
+          			<f:selectItem itemLabel="Corrida" itemValue="Corrida" />
+          			<f:selectItem itemLabel="Futebol" itemValue="Futebol" />
+          			<f:selectItem itemLabel="Natação" itemValue="Natação" />
+          			<f:selectItem itemLabel="Volei" itemValue="Volei" />
+          			
+          			
+          			
+          			</p:selectOneMenu>
+          		</h:panelGrid>
+          		
+          		<h:panelGrid columns="4" cellpadding="5">                
+                <p:outputLabel for="tipoEsporte" value="Gostaria de praticar algum tipo de esporte?"/>
+                <p:selectOneRadio id="tipoEsporte">
+            		<f:selectItem itemLabel="Sim" itemValue="Sim" />
+           			<f:selectItem itemLabel="Não" itemValue="Não" />
+ 				</p:selectOneRadio>                     
+          		</h:panelGrid>
+          		
+          		<h:panelGrid columns="2" cellpadding="5">
+	          		<p:outputLabel for="qualTipo" value="Qual?"/>
+	          		<p:selectOneMenu id="qualTipo">
+	          		<f:selectItem itemLabel="Escolha"/>
+	          		<f:selectItem itemLabel="Arco e Flecha" itemValue="Arco e Flecha" />
+          			<f:selectItem itemLabel="Artes Marciais" itemValue="Artes Marciais" />
+          			<f:selectItem itemLabel="Badminton" itemValue="Badminton" />
+          			<f:selectItem itemLabel="Basquete" itemValue="Basquete" />
+          			<f:selectItem itemLabel="Ciclismo" itemValue="Ciclismo" />
+          			<f:selectItem itemLabel="Corrida" itemValue="Corrida" />
+          			<f:selectItem itemLabel="Futebol" itemValue="Futebol" />
+          			<f:selectItem itemLabel="Natação" itemValue="Natação" />
+          			<f:selectItem itemLabel="Volei" itemValue="Volei" />
+	          		</p:selectOneMenu>
+          		</h:panelGrid>
+          		
+          		<h:panelGrid columns="2" cellpadding="5">
+          		<p:outputLabel value="Caso houvesse uma gincana na sua escola Etec, você participaria?"/>
+          	    <p:selectOneRadio id="Gincana">
+            		<f:selectItem itemLabel="Sim" itemValue="Sim" />
+           			<f:selectItem itemLabel="Não" itemValue="Não" />
+ 				</p:selectOneRadio>         
+          		</h:panelGrid>
+          		
+          		<h:panelGrid columns="2" cellpadding="4">
+          		<p:outputLabel value="Caso houvesse um campeonato na sua Etec, você participaria?"/>
+          		<p:selectOneRadio id="Campeonato">
+            		<f:selectItem itemLabel="Sim" itemValue="Sim" />
+           			<f:selectItem itemLabel="Não" itemValue="Não" />
+ 				</p:selectOneRadio>         
+          		</h:panelGrid>
+          		
+          		<h:panelGrid cellpadding="5" columns="2">
+          			<p:outputLabel for="qualesporte" value="Qual é o seu Esporte Favorito?"/>
+          			<p:selectOneMenu id="qualesporte">
+          			<f:selectItem itemLabel="Escolha"/>
+          			<f:selectItem itemLabel="Arco e Flecha" itemValue="Arco e Flecha" />
+          			<f:selectItem itemLabel="Artes Marciais" itemValue="Artes Marciais" />
+          			<f:selectItem itemLabel="Badminton" itemValue="Badminton" />
+          			<f:selectItem itemLabel="Basquete" itemValue="Basquete" />
+          			<f:selectItem itemLabel="Ciclismo" itemValue="Ciclismo" />
+          			<f:selectItem itemLabel="Corrida" itemValue="Corrida" />
+          			<f:selectItem itemLabel="Futebol" itemValue="Futebol" />
+          			<f:selectItem itemLabel="Natação" itemValue="Natação" />
+          			<f:selectItem itemLabel="Volei" itemValue="Volei" />
+          			</p:selectOneMenu>
+          		</h:panelGrid>
+    
+    
+         
+    
+  	<p:outputLabel value="Com qual frequencia você pratica esporte"/>
+    <p:selectOneRadio id="frequenciaDias" value="#{esporteBean.pe.frenquenciaEsporte}" layout="responsive" columns="1">
+          <f:selectItem itemLabel="Todos os Dias" itemValue="Todos os Dias" />
+            <f:selectItem itemLabel="5 vezes por semana" itemValue="5 vezes por semana" />
+            <f:selectItem itemLabel="3 vezes por semana" itemValue="3 vezes por semana" />
+            <f:selectItem itemLabel="1 vez por semana" itemValue="1 vez por semana" />
+            <f:selectItem itemLabel="Nunca" itemValue="Nunca" />
+    </p:selectOneRadio>
+          		<p:commandButton value="Enviar"></p:commandButton>
+          		
+          		
+            
+        </p:tab>
+        <p:tab title="Música ">
+            <h:panelGrid columns="2" cellpadding="10">
+            <h:outputText value="" />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Cursos ">
+            <h:panelGrid columns="2" cellpadding="10">
+               
+                <h:outputText value="" />
+            </h:panelGrid>
+        </p:tab>
+         <p:tab title="Experiência Profissional ">
+            <h:panelGrid columns="2" cellpadding="10">
+             
+                <h:outputText
+                    value="" />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Acadêmico ">
+            <h:panelGrid columns="2" cellpadding="10">
+              
+                <h:outputText value="" />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Pessoal ">
+            <h:panelGrid columns="2" cellpadding="10">
+               
+                <h:outputText value="" />
+            </h:panelGrid>
+        </p:tab>
+    </p:tabView>
+    </h:form>
+</body>
+</html>
