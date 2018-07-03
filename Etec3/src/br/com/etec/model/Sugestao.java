@@ -3,6 +3,7 @@ package br.com.etec.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 
@@ -18,7 +19,22 @@ public class Sugestao {
 	private Boolean anonimo;
 	private String descricao;
 	
+	@ManyToOne
+	private Usuario usuario;
+	
 		
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 	public String getTipoSugestao() {
 		return tipoSugestao;
 	}
